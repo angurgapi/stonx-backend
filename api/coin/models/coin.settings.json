@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "coins",
+  "info": {
+    "name": "coin",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "symbol": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "float"
+    },
+    "initPrice": {
+      "type": "float"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "coins"
+    },
+    "username": {
+      "type": "string"
+    }
+  }
+}
